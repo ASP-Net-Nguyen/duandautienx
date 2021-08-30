@@ -1,11 +1,23 @@
 ﻿@page
-@model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Home page";
 }
 
+<h3>@Message</h3>
 <form method="post">
-    <button asp-page-handler="Register">Register Now</button>
-    <button asp-page-handler="Requestinfo">Request Info</button>
+    <p><button class="btn btn-primary" type="submit">Send Post Request</button></p>
 </form>
-<p>nguyen</p>
+<p><a href="/" class="btn btn-primary">Send Get Request</a></p>
+
+@functions{
+    public string Message { get; set; }
+    public void OnGet()
+    {
+        Message = "this id a Get request";
+    }
+    public void OnPost()
+    {
+        Message = "this id a Post request";
+    }
+}
