@@ -1,0 +1,30 @@
+﻿@page   
+    @*"{handler}/{id}" delete/10 *@
+@model duandautienx.Pages.MultiformModel
+@{
+    ViewData["Title"] = "Multiform";
+}
+
+<div class="row">
+    <div class="col-sm">
+        <form asp-page-handler="edit" method="post">
+            <button class="btn btn-outline-danger">Edit</button>
+        </form>
+    </div>
+    <div class="col-sm">
+        @*        <form asp-page-handler="delete" method="post">
+            <button class="btn btn-outline-primary">Delete</button>
+        </form>*@
+        <form asp-page-handler="delete" asp-route-id="10" method="post">@*delete?id=10*@
+            <button class="btn btn-default">Delete</button>
+        </form>
+    </div>
+    <div class="col-sm">
+        <form asp-page-handler="view" method="post">
+            <button class="btn btn-outline-secondary">View</button>
+            <input type="hidden" name="id" value="3" />
+        </form>
+    </div>
+</div>
+
+<h3>@Model.Message</h3>
