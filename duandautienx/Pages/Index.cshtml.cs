@@ -10,16 +10,14 @@ namespace duandautienx.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
+        public string Message { get; set; }
         public void OnGet()
         {
-
+            Message = "this is a Get request";
+        }
+        public void OnPost()
+        {
+            Message = "this is a Post request";
         }
     }
 }
