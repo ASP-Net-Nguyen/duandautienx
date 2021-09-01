@@ -1,0 +1,17 @@
+﻿@page
+@model duandautienx.Pages.textModel
+@{
+}
+
+<h1 style="color:aquamarine">Time</h1>
+<p>Bây giờ là @DateTime.Now</p>
+<p>Giờ này tuần trước là: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+<p>@TimeSpan.FromDays(1)</p>
+<p>@TimeSpan.FromDays(2)</p>
+<p>@TimeSpan.FromDays(3)</p>
+<p>Bây giờ là @DateTime.Now</p>
+<p>1 + 1 = @(1+1)</p>
+<p>Pi = @Math.PI</p>
+<p>E = @Math.E</p>
+<p>Cos = @Math.Cos(10)</p>
+<p>... = @Math.Abs(2)</p>
